@@ -7,6 +7,8 @@ Entregar el url de GitHub con la solución y un readme con las siguiente informac
 1. **Nombres y apellidos:** Juan José Salvador Román
 2. **Fecha:** 24/09/2020
 3. **Resumen del Ejercicio:** 
+Ejercicio 1: Se cargan los eventos automáticamente, desde un array de json previamente cargado.
+Ejercicio 2: Se añaden 2 check para quitar o añadir los eventos relacionados con estos check.
 
 
 4. **Dificultad o problemas presentados y como se resolvieron:** 
