@@ -114,82 +114,23 @@ Ensure that you have cloned the 20480C directory from GitHub (** https://github.
 ### Exercise 2: Handling Events
 
 #### Task 1: Add check box HTML elements
+## Laboratorio Módulo 3
 
-1.	In ContosoConf - Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-2.	In the **Open Project** dialog box, browse to **[Repository Root]\Allfiles\Mod03\Labfiles\Start\Exercise 2**, click **ContosoConf.sln**, and then click **Open**.
+Fichero de Instrucciones: Instructions\20480C_MOD03_LAK.md
 
->**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
->
->3.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **schedule.htm**.
->4.	Find the line containing the following HTML markup:
->
->  ```html
->      <ul id="schedule"></ul>
->  ```
->
->5.	Before this line, insert the following HTML markup:
->   Show:
->
->  ```html
->      <input type="checkbox" id="show-track-1" checked="checked"/><label      for="show-track-1">Track 1</label>
->      <input type="checkbox" id="show-track-2" checked="checked"/><label      for="show-track-2">Track 2</label>
->  ```
+Entregar el url de GitHub con la solución y un readme con las siguiente información:
 
-#### Task 2: Write code to get the check box elements from the Schedule page
+1. **Nombres y apellidos:** Juan José Salvador Román
+2. **Fecha:** 24/09/2020
+3. **Resumen del Ejercicio:** 
 
-1. In Solution Explorer, expand the **scripts** folder, expand the **pages** sub-folder, and then double-click **schedule.js**.
 
-2. In **schedule.js**, find the line containing the following JavaScript code:
+4. **Dificultad o problemas presentados y como se resolvieron:** 
+Pues creo que es correcto pero ya dudo porque tengo lio con los repositorios y no sé muy bien como saber que proyecto de un repositorio corresponde con qué proyecto de los recientes en el visual studio.
 
-   ```javascript
-       const list = document.getElementById("schedule");
-   ```
+**NOTA**: Si no hay descripcion de problemas o dificultades, y al yo descargar el código para realizar la comprobacion y el código no funcionar, el resultado de la califaciación del laboratorio será afectado.
 
-3. After this line, add the following JavaScript code:
 
-   ```javascript
-       const track1CheckBox = document.getElementById("show-track-1");
-       const track2CheckBox = document.getElementById("show-track-2");
-   ```
 
-#### Task 3: Add click event listeners for each check box
+Fecha de entrega: Jueves 24 de septiembre de 2020
 
-1. In **schedule.js**, add the following JavaScript code to the end of the file:
-
-   ```javascript
-       track1CheckBox.addEventListener("click", displaySchedule, false);
-       track2CheckBox.addEventListener("click", displaySchedule, false);
-   ```
-
-#### Task 4: Update the displaySchedule function to display the sessions for selected tracks
-
-1. In the **schedule.js** file, in the **displaySchedule** function, replace the body of the **for** loop with the following JavaScript code:
-
-   ```javascript
-       const tracks = schedule[i].tracks;
-       const isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
-                               (track2CheckBox.checked && tracks.indexOf(2) >= 0);
-       if (isCurrentTrack) {
-           const li = createSessionElement(schedule[i]);
-           list.appendChild(li);
-       }
-   ```
-
-#### Task 5: Run the web application and view the Schedule page
-
-1.	In Solution Explorer, double-click **schedule.htm**.
-2.	On the **Debug** menu, click **Start Without Debugging**.
-3.	In Microsoft Edge, verify that both check boxes are selected and that the complete list of sessions is displayed.
-4.	Clear **Track 1** and verify that only the sessions for **Track 2** appear.
-5.	Select **Track 1**, clear **Track 2**, and then verify that only the sessions for Track 1 appear.
-6.	Clear **Track 1** and verify that no sessions appear.
-7.	Close Microsoft Edge.
-8.	Close all open windows.
-
->**Results**: After completing this exercise, you will have updated the **Schedule** page to filter sessions based on which tracks have been selected.
-
-©2018 Microsoft Corporation. All rights reserved.
-
-The text in this document is available under the [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
-
-This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, 
